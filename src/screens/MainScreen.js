@@ -29,7 +29,7 @@ class MainScreen extends Component {
     title: "Redux Keys",
     headerStyle: {
       height: Platform.OS === "android" ? 54 + STATUS_BAR_HEIGHT : 54,
-      backgroundColor: "#2196F3"
+      backgroundColor: "red"
     },
     headerTitleStyle: {
       height: Platform.OS === "android" ? STATUS_BAR_HEIGHT : 0,
@@ -49,7 +49,7 @@ class MainScreen extends Component {
   async _loadAssetsAsync() {
     const imageAssets = cacheImages([icon]);
     await Promise.all([...imageAssets]);
-    this.setState({ appIsReady });
+    this.setState({ appIsReady: true });
   }
 
   render() {
