@@ -1,3 +1,3 @@
-import data from "./key_list.json";
+import data from "../data/key_list";
 
 export default () => data;
