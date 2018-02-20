@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { View, Platform, Image } from "react-native";
 import Expo from "expo";
 import icon from "../../assets/icons/pure-icon.png";
+
+import KeysButtons from "../components/KeyButtons";
 import { STATUS_BAR_HEIGHT } from "../constants/index";
 
 const cacheImages = images =>
@@ -46,9 +48,7 @@ class MainScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: "#ddd" }}>
-        {/* Chord Modal */}
-
-        {/* Content */}
+        <KeysButtons />
       </View>
     );
   }

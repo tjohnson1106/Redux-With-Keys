@@ -8,5 +8,20 @@ const INITIAL_STATE = {
     selectedCapo = 7,
 };
 
-export default (state = INITIAL_STATE
-);
+export default (state = INITIAL_STATE, action
+) => 
+switch (action.type) {
+    case SELECT_KEY_INDEX: {
+        return {
+            ...state,
+            selectedKeyIndex: action.payload
+        };
+    }
+    case SELECT_CAPO: {
+        return {
+            ...state,
+          selectedCapo: action.payload  
+      }
+    }
+    default: return state;    
+};
